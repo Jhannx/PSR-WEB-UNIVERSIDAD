@@ -1,0 +1,8 @@
+﻿# Notas internas de desarrollo
+docs/dev/
+# Archivos del sistema y del editor
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
