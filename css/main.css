@@ -1,0 +1,17 @@
+﻿/* main.css — archivo central de estilos del proyecto */
+
+/* 1. Librerias externas */
+@import url("libs/bootstrap.min.css");
+@import url("libs/fonts/fonts.css");
+@import url("libs/phosphor-icons/bold/style.css");
+@import url("libs/phosphor-icons/fill/style.css");
+
+/* 2. Estilos base y variables */
+@import url("base/variables.css");
+@import url("base/global.css");
+
+/* 3. Estructura general de pagina (layout) */
+@import url("layout/header-footer.css");
+
+/* 4. Componentes */
+@import url("components/buttons.css");

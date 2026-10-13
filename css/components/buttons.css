@@ -1,0 +1,55 @@
+﻿/* buttons.css — botones y llamadas a la acción */
+
+/* Botón principal accionable (Naranja de alto contraste) */
+.psr-btn-flame {
+  --bs-btn-padding-x: 1.25rem;
+  --bs-btn-padding-y: 0.75rem;
+  --bs-btn-font-weight: 700;
+  --bs-btn-border-radius: var(--psr-radius);
+  --bs-btn-color: var(--psr-ink);
+  --bs-btn-bg: var(--psr-orange);
+  --bs-btn-border-color: var(--psr-orange);
+  --bs-btn-hover-color: var(--psr-ink);
+  --bs-btn-hover-bg: var(--psr-orange-hover);
+  --bs-btn-hover-border-color: var(--psr-orange-hover);
+  --bs-btn-active-color: var(--psr-ink);
+  --bs-btn-active-bg: var(--psr-orange-hover);
+  --bs-btn-active-border-color: var(--psr-orange-hover);
+  --bs-btn-focus-shadow-rgb: 245, 130, 31;
+}
+
+/* Botón secundario sobre fondos claros */
+.psr-btn-soft {
+  --bs-btn-padding-x: 1rem;
+  --bs-btn-padding-y: 0.75rem;
+  --bs-btn-font-weight: 700;
+  --bs-btn-border-radius: var(--psr-radius);
+  --bs-btn-color: var(--psr-purple);
+  --bs-btn-bg: var(--psr-purple-100);
+  --bs-btn-border-color: var(--psr-purple-100);
+  --bs-btn-hover-color: var(--psr-purple);
+  --bs-btn-hover-bg: var(--psr-purple-soft);
+  --bs-btn-hover-border-color: var(--psr-line);
+  --bs-btn-active-color: var(--psr-purple);
+  --bs-btn-active-bg: var(--psr-purple-soft);
+  --bs-btn-active-border-color: var(--psr-line);
+  --bs-btn-focus-shadow-rgb: 59, 37, 150;
+}
+
+/* Botón secundario sobre fondos oscuros */
+.psr-btn-outline-light {
+  --bs-btn-padding-x: 1.25rem;
+  --bs-btn-padding-y: 0.75rem;
+  --bs-btn-font-weight: 700;
+  --bs-btn-border-radius: var(--psr-radius);
+  --bs-btn-color: #fff;
+  --bs-btn-bg: transparent;
+  --bs-btn-border-color: rgba(255, 255, 255, 0.7);
+  --bs-btn-hover-color: var(--psr-ink);
+  --bs-btn-hover-bg: #fff;
+  --bs-btn-hover-border-color: #fff;
+  --bs-btn-active-color: var(--psr-ink);
+  --bs-btn-active-bg: #fff;
+  --bs-btn-active-border-color: #fff;
+  --bs-btn-focus-shadow-rgb: 255, 255, 255;
+}

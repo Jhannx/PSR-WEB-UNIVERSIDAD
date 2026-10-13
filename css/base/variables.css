@@ -1,0 +1,48 @@
+﻿/* variables.css — paleta institucional y configuración de diseño */
+:root {
+  /* Colores oficiales de la academia (Tela / Marca) */
+  --psr-magenta: #e91e63;
+  --psr-magenta-hover: #d81557;
+  --psr-cyan: #00a6da;
+  --psr-cyan-hover: #008fbc;
+
+  /* Colores accionables y auxiliares (de PSR WEB) */
+  --psr-orange: #f5821f;
+  --psr-orange-hover: #f79340;
+  --psr-orange-light: #fdba74;
+
+  /* Colores de soporte estructural web */
+  --psr-purple: #3b2596;
+  --psr-purple-soft: #f1edfd;
+  --psr-purple-100: #ebe6fb;
+  --psr-ink: #1f1450;
+  --psr-body: #5b5775;
+  --psr-line: #dcd5f7;
+  --psr-on-dark: rgba(255, 255, 255, 0.88);
+
+  /* Neutros */
+  --psr-black: #000000;
+  --psr-white: #ffffff;
+
+  /* Tipografías */
+  --psr-font-body: "Inter", system-ui, sans-serif;
+  --psr-font-display: "Manrope", "Inter", system-ui, sans-serif;
+
+  /* Bordes redondeados */
+  --psr-radius: 0.75rem;
+  --psr-radius-lg: 1rem;
+
+  /* Sobrescritura de variables de Bootstrap */
+  --bs-primary: var(--psr-purple);
+  --bs-primary-rgb: 59, 37, 150;
+  --bs-body-font-family: var(--psr-font-body);
+  --bs-body-color: var(--psr-body);
+  --bs-heading-color: var(--psr-ink);
+  --bs-border-color: var(--psr-line);
+  --bs-border-radius: var(--psr-radius);
+  --bs-border-radius-lg: var(--psr-radius-lg);
+  --bs-link-color: var(--psr-purple);
+  --bs-link-color-rgb: 59, 37, 150;
+  --bs-link-hover-color: var(--psr-ink);
+  --bs-link-hover-color-rgb: 31, 20, 80;
+}
