@@ -1,4 +1,4 @@
-﻿# Arquitectura y Estructura de Carpetas
+# Arquitectura y Estructura de Carpetas
 
 ## ¿Cómo está organizado el proyecto?
 
@@ -29,7 +29,11 @@ PSR-WEB-UNIVERSIDAD/
    libs/
       fonts/
       phosphor-icons/
-   main.css
+   styles.css
+
+  img/
+   icons/
+   logo-psr-pestaña.png
 
   js/
    libs/
@@ -51,9 +55,9 @@ PSR-WEB-UNIVERSIDAD/
 * Tanto las fuentes tipográficas (Inter y Manrope en formato .woff2) como los íconos (Phosphor Icons) están guardados localmente dentro de `css/libs/`.
 * Esto permite que el proyecto funcione en cualquier computador sin depender de conexión a internet.
 
-### Archivo CSS principal (main.css)
-En lugar de enlazar muchos archivos CSS en cada HTML, cada página solo enlaza a **css/main.css**.  
-Dentro de main.css se importan los archivos en orden:
+### Archivo CSS principal (styles.css)
+En lugar de enlazar muchos archivos CSS en cada HTML, cada página solo enlaza a **css/styles.css**.  
+Dentro de styles.css se importan los archivos en orden:
 * Librerías externas (`libs/`).
 * Variables y estilos base (`base/`).
 * Estructura general de página (`layout/`).

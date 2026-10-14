@@ -1,4 +1,4 @@
-﻿# PSR (Pioneros de la Salsa y Ritmos) - Pagina Web
+# PSR (Pioneros de la Salsa y Ritmos) - Pagina Web
 
 Proyecto web desarrollado para la academia y academia de baile **PSR (Pioneros de la Salsa y Ritmos)**.
 
@@ -44,7 +44,13 @@ css/
 │   libs/                   # Dependencias de terceros (iconos, fuentes)
 │   │   fonts/              # Inter y Manrope locales (.woff2)
 │   │   phosphor-icons/     # Iconografía vectorial local
-│   main.css                # Manifiesto principal de estilos
+│   styles.css              # Manifiesto principal de estilos
+
+
+
+img/                        # Fotografías de la academia
+│   icons/                  # Iconos de redes sociales (.svg)
+│   logo-psr-pestaña.png    # Logo que se muestra en la pestaña del navegador
 
 
 
