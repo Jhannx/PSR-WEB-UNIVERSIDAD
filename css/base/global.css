@@ -1,21 +1,29 @@
-﻿/* global.css — estructura base de página, tipografía y estilos comunes */
+/* global.css — estructura base, tipografía y utilidades */
 
-html,
+/* Estructura de página con CSS Grid */
 body {
-  height: 100%;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
   font-family: var(--psr-font-body);
   color: var(--psr-body);
   background-color: #fff;
 }
 
+.psr-header {
+  grid-area: header;
+}
+
 main {
-  flex: 1 0 auto;
+  grid-area: main;
+}
+
+.psr-footer {
+  grid-area: footer;
 }
 
 /* Tipografía de títulos */
@@ -44,9 +52,21 @@ h6,
   line-height: 1.15;
 }
 
+@media (min-width: 768px) {
+  .psr-title-xl {
+    font-size: 2.75rem;
+  }
+}
+
 @media (min-width: 992px) {
   .psr-title-xl {
     font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .psr-title-xl {
+    font-size: 3.75rem;
   }
 }
 
@@ -59,7 +79,7 @@ h6,
   max-width: 650px;
 }
 
-/* Subtítulos pequeños de sección */
+/* Subtitulos */
 .psr-eyebrow {
   margin-bottom: 0.5rem;
   font-size: 0.875rem;
@@ -73,14 +93,26 @@ h6,
   color: #fff;
 }
 
-/* Contenedores de sección */
+/* Secciones */
 .psr-section {
-  padding: 4rem 0;
+  padding: 3.5rem 0;
+}
+
+@media (min-width: 768px) {
+  .psr-section {
+    padding: 4.5rem 0;
+  }
 }
 
 @media (min-width: 992px) {
   .psr-section {
     padding: 5rem 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .psr-section {
+    padding: 5.5rem 0;
   }
 }
 

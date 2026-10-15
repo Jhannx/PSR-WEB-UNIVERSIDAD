@@ -1,17 +1,18 @@
-﻿/* variables.css — paleta institucional y configuración de diseño */
+/* variables.css - variables de colores y fuentes */
+
 :root {
-  /* Colores oficiales de la academia (Tela / Marca) */
+  /* Colores principales de la academia */
   --psr-magenta: #e91e63;
   --psr-magenta-hover: #d81557;
   --psr-cyan: #00a6da;
   --psr-cyan-hover: #008fbc;
 
-  /* Colores accionables y auxiliares (de PSR WEB) */
+  /* Botones y enlaces (naranja) */
   --psr-orange: #f5821f;
   --psr-orange-hover: #f79340;
   --psr-orange-light: #fdba74;
 
-  /* Colores de soporte estructural web */
+  /* Fondos y textos */
   --psr-purple: #3b2596;
   --psr-purple-soft: #f1edfd;
   --psr-purple-100: #ebe6fb;

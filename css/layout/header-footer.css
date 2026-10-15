@@ -1,4 +1,4 @@
-﻿/* Header */
+/* Header */
 .psr-header {
   background-color: var(--psr-purple);
 }
@@ -118,6 +118,17 @@
   margin-top: 1.5rem;
 }
 
+/* Version de tablet (>= 768px) */
+@media (min-width: 768px) {
+  .psr-header-top {
+    padding: 1.125rem 0;
+  }
+
+  .psr-brand-name {
+    font-size: 1.25rem;
+  }
+}
+
 /* Version de escritorio (>= 992px) */
 @media (min-width: 992px) {
   .psr-header-top {
@@ -160,6 +171,17 @@
     background-color: transparent;
     color: var(--psr-orange-light);
     font-weight: 700;
+  }
+}
+
+/* Version de pantalla ancha (>= 1200px) */
+@media (min-width: 1200px) {
+  .psr-brand-name {
+    font-size: 1.5rem;
+  }
+
+  .psr-nav-link {
+    font-size: 0.9375rem;
   }
 }
 
@@ -226,6 +248,22 @@
   color: var(--psr-cyan);
 }
 
+/* Footer - Version de tablet (>= 768px) */
+@media (min-width: 768px) {
+  .psr-footer-bar {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .psr-footer-motto {
+    width: 100%;
+  }
+}
+
+/* Footer - Version de escritorio (>= 992px) */
 @media (min-width: 992px) {
   .psr-footer-bar {
     display: grid;
@@ -236,7 +274,24 @@
   }
 
   .psr-footer-motto {
+    width: auto;
     justify-self: end;
+  }
+}
+
+/* Footer - Version de pantalla ancha (>= 1200px) */
+@media (min-width: 1200px) {
+  .psr-footer-bar {
+    padding: 2.5rem 0;
+    gap: 3rem;
+  }
+
+  .psr-fab {
+    right: 2rem;
+    bottom: 2rem;
+    width: 3.75rem;
+    height: 3.75rem;
+    font-size: 1.625rem;
   }
 }
 
