@@ -1,0 +1,46 @@
+/* accordion.css - acordeon nativo de Bootstrap con personalizacion PSR */
+.psr-accordion {
+  --bs-accordion-bg: #ffffff;
+  --bs-accordion-color: var(--psr-body);
+  --bs-accordion-border-color: var(--psr-line);
+  --bs-accordion-border-radius: var(--psr-radius);
+  --bs-accordion-inner-border-radius: var(--psr-radius);
+  --bs-accordion-btn-padding-x: 1.25rem;
+  --bs-accordion-btn-padding-y: 1rem;
+  --bs-accordion-btn-color: var(--psr-ink);
+  --bs-accordion-active-color: var(--psr-ink);
+  --bs-accordion-active-bg: #ffffff;
+  --bs-accordion-body-padding-x: 1.25rem;
+  --bs-accordion-body-padding-y: 1rem;
+  --bs-accordion-btn-focus-box-shadow: inset 0 0 0 0.2rem rgba(245, 130, 31, 0.4);
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Items individuales como recuadros separados */
+.psr-accordion .accordion-item,
+.psr-accordion .accordion-item:not(:first-of-type) {
+  overflow: hidden;
+  border: 1px solid var(--psr-line);
+  border-radius: var(--psr-radius);
+  box-shadow: 0 1px 3px rgba(31, 20, 80, 0.04);
+}
+
+.psr-accordion .accordion-button {
+  font-family: var(--psr-font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.psr-accordion .accordion-button:not(.collapsed) {
+  color: var(--psr-purple);
+  box-shadow: none;
+}
+
+.psr-accordion .accordion-body {
+  border-top: 1px solid var(--psr-line);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}

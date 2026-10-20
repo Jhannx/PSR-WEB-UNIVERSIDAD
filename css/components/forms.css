@@ -1,0 +1,55 @@
+/* forms.css - campos de formulario y estilos de validacion nativa */
+.form-control,
+.form-select {
+  padding: 0.75rem 1rem;
+  border-color: var(--psr-line);
+  border-radius: var(--psr-radius);
+  font-family: var(--psr-font-body);
+  font-size: 0.95rem;
+  color: var(--psr-ink);
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--psr-orange);
+  box-shadow: 0 0 0 0.25rem rgba(245, 130, 31, 0.35);
+}
+
+.form-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: var(--psr-ink);
+}
+
+/* Variante sobre fondo oscuro (.psr-section-dark) */
+.psr-form-dark .form-label {
+  color: #ffffff;
+}
+
+/* Caja de confirmacion de envio simulado */
+.psr-confirm-box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  border: 1px solid var(--psr-line);
+  border-radius: var(--psr-radius);
+  background-color: #ffffff;
+  color: var(--psr-ink);
+}
+
+.psr-confirm-box i {
+  font-size: 2.25rem;
+  color: var(--psr-orange);
+}
+
+.psr-confirm-box p {
+  margin: 0;
+}
+
+.psr-confirm-title {
+  font-family: var(--psr-font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+}

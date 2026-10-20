@@ -125,3 +125,22 @@ h6,
   color: var(--psr-on-dark);
   --bs-heading-color: #fff;
 }
+.psr-section-purple {
+  background-color: var(--psr-purple);
+  color: var(--psr-on-dark);
+  --bs-heading-color: #ffffff;
+}
+
+.psr-section-magenta {
+  background-color: var(--psr-magenta);
+  color: #ffffff;
+  --bs-heading-color: #ffffff;
+}
+
+.psr-section-magenta .psr-eyebrow-light {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.psr-section-magenta .text-white-50 {
+  color: rgba(255, 255, 255, 0.9) !important;
+}

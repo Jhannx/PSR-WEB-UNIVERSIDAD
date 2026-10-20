@@ -1,0 +1,151 @@
+/* cards.css - tarjetas de contenido, cifras y programas */
+
+/* Tarjetas de estadisticas y cifras (Seccion 2 de la portada) */
+.psr-stat-card {
+  padding: 1.75rem 1.5rem;
+  background-color: #ffffff;
+  border: 1px solid var(--psr-line);
+  border-radius: var(--psr-radius-lg);
+  box-shadow: 0 4px 12px rgba(31, 20, 80, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.psr-stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(31, 20, 80, 0.08);
+}
+
+.psr-stat-number {
+  font-family: var(--psr-font-display);
+  font-size: 2.75rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--psr-magenta);
+}
+
+/* Pastillas informativas (badges) */
+.psr-badge {
+  display: inline-block;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  border-radius: 50px;
+  background-color: var(--psr-purple-100);
+  color: var(--psr-purple);
+  margin-bottom: 0.75rem;
+  align-self: flex-start;
+}
+
+.psr-badge-orange {
+  background-color: #fef0e4;
+  color: #c95d08;
+}
+
+.psr-badge-cyan {
+  background-color: #e0f6fc;
+  color: #00779d;
+}
+
+/* Tarjeta principal de programas y servicios */
+.psr-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border: 1px solid var(--psr-line);
+  border-radius: var(--psr-radius-lg);
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(31, 20, 80, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.psr-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(31, 20, 80, 0.09);
+  border-color: var(--psr-purple);
+}
+
+/* Imagen superior de la tarjeta */
+.psr-card-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Cuerpo interno de la tarjeta */
+.psr-card-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.psr-card-title {
+  font-family: var(--psr-font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--psr-ink);
+  margin-bottom: 0.75rem;
+}
+
+.psr-card-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--psr-body);
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+/* Enlace interactivo con flecha al pie de la tarjeta */
+.psr-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--psr-purple);
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.psr-card-link:hover {
+  color: var(--psr-orange);
+  transform: translateX(3px);
+}
+
+/* Icono cuadrado para tarjetas de beneficios */
+.psr-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: var(--psr-radius);
+  background-color: var(--psr-purple-100);
+  color: var(--psr-purple);
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+/* Tarjeta destacada morada con icono naranja (pedida para que incluye ser parte de la academia) */
+.psr-card-featured {
+  background-color: var(--psr-purple) !important;
+  border-color: var(--psr-purple) !important;
+  color: var(--psr-on-dark) !important;
+}
+
+.psr-card-featured h3,
+.psr-card-featured .h5 {
+  color: #ffffff !important;
+}
+
+.psr-card-featured p,
+.psr-card-featured .small {
+  color: rgba(255, 255, 255, 0.88) !important;
+}
+
+.psr-card-featured .psr-card-icon {
+  background-color: var(--psr-orange) !important;
+  color: var(--psr-ink) !important;
+}
