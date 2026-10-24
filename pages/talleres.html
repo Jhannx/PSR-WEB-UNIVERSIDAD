@@ -62,11 +62,178 @@
     </div>
   </header>
 
-  <!-- Contenido principal - Pendiente -->
+  <!-- Contenido principal -->
   <main>
-    <div class="container py-5">
-      <h1>Talleres de Danza para Instituciones</h1>
-    </div>
+    <!-- Seccion 1: Portada de Talleres -->
+    <section class="psr-section psr-section-purple" aria-labelledby="talleres-titulo">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12 col-lg-8">
+            <p class="psr-eyebrow psr-eyebrow-light">TALLERES Y FORMACIÓN</p>
+            <h1 class="psr-title-xl text-white" id="talleres-titulo">Talleres de Danza para Colegios y Empresas</h1>
+            <p class="psr-lead text-white-50 mt-3">
+              Llevamos metodologías dinámicas de baile, trabajo en equipo y expresión corporal a colegios, universidades y empresas en Sincelejo y Sucre.
+            </p>
+            <div class="mt-4">
+              <a class="btn psr-btn-flame" href="#solicitud">
+                Solicitar propuesta de taller <i class="ph-bold ph-arrow-down ms-1" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seccion 2: Modalidades de Taller -->
+    <section class="psr-section" aria-labelledby="modalidades-titulo">
+      <div class="container">
+        <div class="text-center mb-5">
+          <p class="psr-eyebrow">PROGRAMAS A MEDIDA</p>
+          <h2 class="psr-title-xl" id="modalidades-titulo">Modalidades de Capacitación y Danza</h2>
+          <p class="psr-lead text-muted mx-auto psr-measure">
+            Diseñamos cada sesión según el perfil de los participantes, el objetivo del grupo y el espacio disponible.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Modalidad 1: Escolar y Universitario -->
+          <div class="col-12 col-md-4">
+            <article class="psr-card h-100">
+              <img class="psr-card-img" src="../img/grupal-3.jpeg" alt="Taller de baile con jóvenes estudiantes">
+              <div class="psr-card-body">
+                <span class="psr-badge">Colegios y Universidades</span>
+                <h3 class="psr-card-title">Talleres Escolares y Juveniles</h3>
+                <p class="psr-card-text">
+                  Iniciación a los ritmos latinos, desarrollo psicomotriz y fomento del arte como alternativa saludable para estudiantes de primaria, secundaria y educación superior.
+                </p>
+                <p class="small text-muted mb-0"><strong>Enfoque:</strong> Convivencia, ritmo y cultura.</p>
+              </div>
+            </article>
+          </div>
+
+          <!-- Modalidad 2: Bienestar Corporativo -->
+          <div class="col-12 col-md-4">
+            <article class="psr-card h-100">
+              <img class="psr-card-img" src="../img/grupal-1.jpeg" alt="Actividad de pausa activa y baile con empleados">
+              <div class="psr-card-body">
+                <span class="psr-badge psr-badge-orange">Bienestar Laboral</span>
+                <h3 class="psr-card-title">Pausas Activas y Clima Laboral</h3>
+                <p class="psr-card-text">
+                  Jornadas de integración empresarial donde la rumba y el movimiento ayudan a desestresar equipos de trabajo, mejorar la postura y fortalecer lazos de compañerismo.
+                </p>
+                <p class="small text-muted mb-0"><strong>Enfoque:</strong> Salud ocupacional y energía.</p>
+              </div>
+            </article>
+          </div>
+
+          <!-- Modalidad 3: Masterclasses Especializadas -->
+          <div class="col-12 col-md-4">
+            <article class="psr-card h-100">
+              <img class="psr-card-img" src="../img/pareja-1.jpeg" alt="Clase intensiva de salsa y técnica">
+              <div class="psr-card-body">
+                <span class="psr-badge psr-badge-cyan">Técnica Avanzada</span>
+                <h3 class="psr-card-title">Masterclasses y Clínicas</h3>
+                <p class="psr-card-text">
+                  Sesiones intensivas dictadas por nuestros maestros para grupos de danza locales o casas de cultura que deseen profundizar en técnica de salsa en línea, mambo y giros.
+                </p>
+                <p class="small text-muted mb-0"><strong>Enfoque:</strong> Perfeccionamiento escénico.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seccion 3: Formulario de Solicitud -->
+    <section class="psr-section psr-section-purple" id="solicitud" aria-labelledby="formulario-taller-titulo">
+      <div class="container">
+        <div class="row g-4 g-lg-5 align-items-center justify-content-center">
+          <div class="col-12 col-lg-5">
+            <p class="psr-eyebrow psr-eyebrow-light">SOLICITUD DE PROPUESTA</p>
+            <h2 class="h1 text-white" id="formulario-taller-titulo">Lleva un Taller a tu Institución</h2>
+            <p class="psr-lead text-white-50 mt-3">
+              Cuéntanos sobre tu organización y los objetivos del taller. Te enviaremos un plan pedagógico detallado con cotización según cantidad de personas y horas.
+            </p>
+            <div class="d-flex align-items-start gap-3 mt-4 text-white-50 small">
+              <i class="ph-bold ph-chalkboard-teacher text-warning fs-4 flex-shrink-0" aria-hidden="true"></i>
+              <p class="mb-0">
+                Instructores certificados, metodología comprobada de 15 años y material musical adaptable a espacios cerrados o abiertos.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-7">
+            <div class="p-4 p-md-5 rounded-4 bg-white text-dark shadow">
+              <h3 class="h4 mb-3 text-dark">Formulario de Solicitud de Taller</h3>
+              
+              <form class="row g-3" id="form-talleres">
+                <!-- Nombre de la institucion -->
+                <div class="col-12 col-md-6">
+                  <label class="form-label" for="taller-institucion">Nombre de la institución o empresa *</label>
+                  <input class="form-control" id="taller-institucion" name="institucion" type="text" placeholder="Colegio, Universidad o Empresa" required>
+                </div>
+
+                <!-- Persona de contacto -->
+                <div class="col-12 col-md-6">
+                  <label class="form-label" for="taller-contacto">Persona de contacto *</label>
+                  <input class="form-control" id="taller-contacto" name="contacto" type="text" placeholder="Tu nombre y apellido" autocomplete="name" required>
+                </div>
+
+                <!-- Correo electronico -->
+                <div class="col-12 col-md-6">
+                  <label class="form-label" for="taller-correo">Correo electrónico de contacto *</label>
+                  <input class="form-control" id="taller-correo" name="correo" type="email" placeholder="contacto@institucion.edu.co" autocomplete="email" required>
+                </div>
+
+                <!-- Telefono -->
+                <div class="col-12 col-md-6">
+                  <label class="form-label" for="taller-telefono">Teléfono celular *</label>
+                  <input class="form-control" id="taller-telefono" name="telefono" type="tel" placeholder="Ej. 300 123 4567" autocomplete="tel" required>
+                </div>
+
+                <!-- Tipo de organizacion -->
+                <div class="col-12 col-md-6">
+                  <label class="form-label" for="taller-tipo">Tipo de organización *</label>
+                  <select class="form-select" id="taller-tipo" name="tipo_organizacion" required>
+                    <option value="" selected disabled>Selecciona el tipo...</option>
+                    <option value="colegio">Colegio o Escuela</option>
+                    <option value="universidad">Universidad o Instituto técnico</option>
+                    <option value="empresa">Empresa privada</option>
+                    <option value="publica">Entidad pública o Alcaldía</option>
+                    <option value="fundacion">Fundación u Organización social</option>
+                  </select>
+                </div>
+
+                <!-- Cantidad de participantes -->
+                <div class="col-12 col-md-6">
+                  <label class="form-label" for="taller-participantes">Participantes estimados *</label>
+                  <select class="form-select" id="taller-participantes" name="participantes" required>
+                    <option value="" selected disabled>Selecciona un rango...</option>
+                    <option value="10-25">10 a 25 personas</option>
+                    <option value="26-50">26 a 50 personas</option>
+                    <option value="51-100">51 a 100 personas</option>
+                    <option value="mas-100">Más de 100 personas (masivo)</option>
+                  </select>
+                </div>
+
+                <!-- Objetivo o detalles -->
+                <div class="col-12">
+                  <label class="form-label" for="taller-detalles">Objetivo del taller y fecha tentativa (opcional)</label>
+                  <textarea class="form-control" id="taller-detalles" name="detalles" rows="3" placeholder="Ej. Pausa activa para semana de la salud, festival de talentos..."></textarea>
+                </div>
+
+                <!-- Boton Enviar -->
+                <div class="col-12 mt-4">
+                  <button class="btn psr-btn-flame w-100" type="submit">
+                    Solicitar propuesta pedagógica <i class="ph-bold ph-paper-plane-tilt ms-1" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <!-- Footer -->
@@ -79,7 +246,7 @@
       </div>
 
       <div class="psr-social">
-        <a class="psr-social-link" href="-" aria-label="Instagram">
+        <a class="psr-social-link" href="https://www.instagram.com/psrpionerosdelasalsayritmos/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
           <img src="../img/icons/instagram.svg" alt="" width="28" height="28">
         </a>
         <a class="psr-social-link" href="-" aria-label="Facebook">

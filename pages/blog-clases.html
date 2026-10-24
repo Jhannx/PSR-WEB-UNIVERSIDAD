@@ -62,11 +62,92 @@
     </div>
   </header>
 
-  <!-- Contenido principal - Pendiente -->
+  <!-- Contenido principal -->
   <main>
-    <div class="container py-5">
-      <h1>Experiencias en Clase</h1>
-    </div>
+    <!-- Seccion de articulo -->
+    <article class="psr-section" aria-labelledby="clase-titulo">
+      <div class="container">
+        <!-- Enlace de regreso -->
+        <div class="mb-4">
+          <a class="psr-card-link" href="blog.html">
+            <i class="ph-bold ph-arrow-left" aria-hidden="true"></i> Volver a todas las publicaciones
+          </a>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-9">
+            <!-- Cabecera del articulo -->
+            <header class="mb-4">
+              <div class="d-flex align-items-center gap-2 mb-3">
+                <span class="psr-badge psr-badge-orange">Novedades de Clases</span>
+                <time class="small text-muted" datetime="2026-10-08">8 de octubre de 2026</time>
+              </div>
+              <h1 class="psr-title-xl mb-3" id="clase-titulo">
+                Consejos Clave para tu Primera Clase de Salsa y Bachata
+              </h1>
+              <p class="psr-lead text-muted">
+                Dar el primer paso en una pista de baile genera emoción e incertidumbre. Aquí te dejamos una guía práctica para aprovechar al máximo tu inicio en la academia.
+              </p>
+            </header>
+
+            <!-- Imagen principal con figure -->
+            <figure class="mb-5">
+              <img class="img-fluid rounded-4 shadow w-100" src="../img/pareja-1.jpeg" alt="Pareja practicando pasos básicos de salsa en el salón">
+              <figcaption class="small text-muted text-center mt-2">
+                Práctica guiada de desplazamiento y postura para principiantes en PSR.
+              </figcaption>
+            </figure>
+
+            <!-- Cuerpo del articulo -->
+            <div class="content-body text-dark">
+              <p>
+                Muchas personas postergan su deseo de aprender a bailar por miedo a "tener dos pies izquierdos" o por creer que necesitan llevar pareja obligatoriamente. En la Escuela de Baile PSR derribamos esos mitos desde la primera sesión: todos empezamos desde cero y en un ambiente de apoyo colectivo.
+              </p>
+
+              <h2 class="h3 mt-5 mb-3">1. La Ropa y el Calzado Adecuado</h2>
+              <p>
+                Para tus primeras semanas no requieres zapatos profesionales de baile. Lo fundamental es llevar calzado cómodo con suela lisa (preferiblemente que no se pegue al piso de madera o baldosa) para permitir giros naturales sin forzar las rodillas ni los tobillos. Viste ropa transpirable que te permita estirarte y mover los brazos con soltura.
+              </p>
+
+              <h2 class="h3 mt-4 mb-3">2. Escucha la Clave y el Tiempo</h2>
+              <p>
+                Antes de preocuparte por vueltas complejas, el secreto de la salsa y la bachata radica en educar el oído. En nuestras clases dedicamos los primeros minutos a identificar el conteo rítmico (1-2-3, 5-6-7 en salsa; 1-2-3-tap en bachata). Sentir el pulso de la percusión hace que los pies sigan la música de forma intuitiva.
+              </p>
+
+              <blockquote class="p-3 my-4 border-start border-4 border-warning bg-light rounded-end">
+                <p class="mb-0 fst-italic">
+                  "Bailar bien no consiste en hacer muchas figuras difíciles, sino en ejecutar el paso básico con peso, tiempo y disfrute genuino."
+                </p>
+              </blockquote>
+
+              <h2 class="h3 mt-4 mb-3">3. No te Juzgues: El Proceso es Gradual</h2>
+              <p>
+                El cerebro necesita tiempo para coordinar el oído con las extremidades. Equivocarse en un conteo o perder el paso es parte natural del aprendizaje. Nuestros 6 profesores están formados pedagógicamente para corregir tu postura con paciencia y celebrar cada pequeño avance.
+              </p>
+
+              <!-- Llamado de accion en el articulo -->
+              <div class="p-4 rounded-4 bg-light border my-5 text-center">
+                <h3 class="h4 mb-2">¿Prefieres atención personalizada?</h3>
+                <p class="text-muted small mb-3">Ofrecemos clases individuales o en pareja en Salsa, Bachata y Champeta con horarios flexibles.</p>
+                <a class="btn psr-btn-flame" href="personalizadas.html">
+                  Ver clases personalizadas <i class="ph-bold ph-arrow-right ms-1" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Navegacion entre articulos -->
+            <nav class="border-top pt-4 d-flex justify-content-between align-items-center" aria-label="Navegación entre artículos">
+              <a class="psr-card-link" href="blog-anuncios.html">
+                <i class="ph-bold ph-arrow-left me-1" aria-hidden="true"></i> Anterior: Anuncios
+              </a>
+              <a class="psr-card-link" href="blog-comunidad.html">
+                Siguiente: Comunidad <i class="ph-bold ph-arrow-right ms-1" aria-hidden="true"></i>
+              </a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </article>
   </main>
 
   <!-- Footer -->
@@ -79,7 +160,7 @@
       </div>
 
       <div class="psr-social">
-        <a class="psr-social-link" href="-" aria-label="Instagram">
+        <a class="psr-social-link" href="https://www.instagram.com/psrpionerosdelasalsayritmos/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
           <img src="../img/icons/instagram.svg" alt="" width="28" height="28">
         </a>
         <a class="psr-social-link" href="-" aria-label="Facebook">

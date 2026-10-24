@@ -62,11 +62,185 @@
     </div>
   </header>
 
-  <!-- Contenido principal - Pendiente -->
+  <!-- Contenido principal -->
   <main>
-    <div class="container py-5">
-      <h1>Contratación de Shows para Eventos</h1>
-    </div>
+    <!-- Seccion 1: Portada de Contratar -->
+    <section class="psr-section psr-section-purple" aria-labelledby="contratar-titulo">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12 col-lg-8">
+            <p class="psr-eyebrow psr-eyebrow-light">ESPECTÁCULOS EN VIVO</p>
+            <h1 class="psr-title-xl text-white" id="contratar-titulo">Shows Coreográficos para Eventos</h1>
+            <p class="psr-lead text-white-50 mt-3">
+              Lleva la energía, elegancia y virtuosismo de nuestros bailarines a bodas, quinceañeros, eventos empresariales y celebraciones culturales en Sincelejo y la región.
+            </p>
+            <div class="mt-4">
+              <a class="btn psr-btn-flame" href="#cotizacion">
+                Cotizar presentación <i class="ph-bold ph-arrow-down ms-1" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seccion 2: Formatos de Show -->
+    <section class="psr-section" aria-labelledby="formatos-titulo">
+      <div class="container">
+        <div class="text-center mb-5">
+          <p class="psr-eyebrow">REPERTORIO Y MONTAJES</p>
+          <h2 class="psr-title-xl" id="formatos-titulo">Formatos Disponibles para tu Celebración</h2>
+          <p class="psr-lead text-muted mx-auto psr-measure">
+            Adaptamos la puesta en escena, vestuarios y duración al tipo de público y espacio de tu evento.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Formato 1: Pareja de Baile -->
+          <div class="col-12 col-md-4">
+            <article class="psr-card h-100">
+              <img class="psr-card-img" src="../img/pareja-2.jpeg" alt="Pareja de bailarines de gala de PSR">
+              <div class="psr-card-body">
+                <span class="psr-badge">Elegancia y Gala</span>
+                <h3 class="psr-card-title">Show de Pareja (Salsa o Bachata)</h3>
+                <p class="psr-card-text">
+                  Puesta en escena íntima y refinada para bodas, cenas de aniversario y recepciones. Incluye rutina coreográfica y vals o apertura de pista guiada con los homenajeados.
+                </p>
+                <p class="small text-muted mb-0"><strong>Duración aprox.:</strong> 15 a 25 minutos.</p>
+              </div>
+            </article>
+          </div>
+
+          <!-- Formato 2: Ensamble Grupal -->
+          <div class="col-12 col-md-4">
+            <article class="psr-card h-100">
+              <img class="psr-card-img" src="../img/festival-1.jpeg" alt="Ensamble coreográfico completo en tarima">
+              <div class="psr-card-body">
+                <span class="psr-badge psr-badge-orange">Impacto Escénico</span>
+                <h3 class="psr-card-title">Ensamble Grupal de Salsa</h3>
+                <p class="psr-card-text">
+                  Entre 6 y 16 bailarines en tarima ejecutando montajes de salsa libre, mambo y fusiones caribeñas con cambios de vestuario brillante y sincronía de alta exigencia.
+                </p>
+                <p class="small text-muted mb-0"><strong>Duración aprox.:</strong> 20 a 40 minutos.</p>
+              </div>
+            </article>
+          </div>
+
+          <!-- Formato 3: Hora Loca / Animacion -->
+          <div class="col-12 col-md-4">
+            <article class="psr-card h-100">
+              <img class="psr-card-img" src="../img/grupal-2.jpeg" alt="Bailarines animando e integrando al público">
+              <div class="psr-card-body">
+                <span class="psr-badge psr-badge-cyan">Pista Llena</span>
+                <h3 class="psr-card-title">Hora Loca y Animación</h3>
+                <p class="psr-card-text">
+                  Bailarines profesionales que prenden la fiesta, invitan a todos los asistentes a la pista y dirigen dinámicas de salsa, champeta y ritmos tropicales garantizando alegría total.
+                </p>
+                <p class="small text-muted mb-0"><strong>Duración aprox.:</strong> 45 a 60 minutos.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seccion 3: Formulario de Cotizacion -->
+    <section class="psr-section psr-section-purple" id="cotizacion" aria-labelledby="formulario-cotizar-titulo">
+      <div class="container">
+        <div class="row g-4 g-lg-5 align-items-center justify-content-center">
+          <div class="col-12 col-lg-5">
+            <p class="psr-eyebrow psr-eyebrow-light">SOLICITUD EN LÍNEA</p>
+            <h2 class="h1 text-white" id="formulario-cotizar-titulo">Cotiza el Show de tu Evento</h2>
+            <p class="psr-lead text-white-50 mt-3">
+              Completa los datos de tu celebración y te enviaremos una propuesta formal con opciones de montaje, vestuario y presupuesto.
+            </p>
+            <div class="d-flex align-items-start gap-3 mt-4 text-white-50 small">
+              <i class="ph-bold ph-shield-check text-warning fs-4 flex-shrink-0" aria-hidden="true"></i>
+              <p class="mb-0">
+                Puntualidad garantizada, bailarines uniformados y sonido revisado previamente con los organizadores.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-7">
+            <div class="p-4 p-md-5 rounded-4 bg-white text-dark shadow">
+              <h3 class="h4 mb-3 text-dark">Formulario de Cotización de Shows</h3>
+              
+              <form class="row g-3" id="form-contratar">
+                <!-- Nombre del solicitante -->
+                <div class="col-12 col-md-6">
+                  <label class="form-label" for="contratar-nombre">Nombre o empresa solicitante *</label>
+                  <input class="form-control" id="contratar-nombre" name="nombre" type="text" placeholder="Tu nombre o razón social" autocomplete="name" required>
+                </div>
+
+                <!-- Telefono -->
+                <div class="col-12 col-md-6">
+                  <label class="form-label" for="contratar-telefono">Teléfono celular de contacto *</label>
+                  <input class="form-control" id="contratar-telefono" name="telefono" type="tel" placeholder="Ej. 300 123 4567" autocomplete="tel" required>
+                </div>
+
+                <!-- Correo electronico -->
+                <div class="col-12 col-md-6">
+                  <label class="form-label" for="contratar-correo">Correo electrónico *</label>
+                  <input class="form-control" id="contratar-correo" name="correo" type="email" placeholder="correo@ejemplo.com" autocomplete="email" required>
+                </div>
+
+                <!-- Tipo de evento -->
+                <div class="col-12 col-md-6">
+                  <label class="form-label" for="contratar-tipo">Tipo de evento *</label>
+                  <select class="form-select" id="contratar-tipo" name="tipo_evento" required>
+                    <option value="" selected disabled>Selecciona el evento...</option>
+                    <option value="boda">Matrimonio o Boda</option>
+                    <option value="quinceanero">Quinceañero</option>
+                    <option value="corporativo">Evento empresarial o Corporativo</option>
+                    <option value="cultural">Festival, Feria o Muestra cultural</option>
+                    <option value="cumpleanos">Cumpleaños o Fiesta privada</option>
+                    <option value="otro">Otro tipo de celebración</option>
+                  </select>
+                </div>
+
+                <!-- Fecha del evento -->
+                <div class="col-12 col-md-6">
+                  <label class="form-label" for="contratar-fecha">Fecha tentativa del evento *</label>
+                  <input class="form-control" id="contratar-fecha" name="fecha_evento" type="date" required>
+                </div>
+
+                <!-- Ciudad o lugar -->
+                <div class="col-12 col-md-6">
+                  <label class="form-label" for="contratar-lugar">Ciudad o municipio del evento *</label>
+                  <input class="form-control" id="contratar-lugar" name="lugar" type="text" placeholder="Ej. Sincelejo, Corozal, Tolú..." required>
+                </div>
+
+                <!-- Formato de interes -->
+                <div class="col-12">
+                  <label class="form-label" for="contratar-formato">Formato coreográfico sugerido *</label>
+                  <select class="form-select" id="contratar-formato" name="formato" required>
+                    <option value="" selected disabled>Selecciona un formato...</option>
+                    <option value="pareja">Show de Pareja de Baile (Salsa o Bachata)</option>
+                    <option value="grupal">Ensamble Grupal Completo (6 a 16 bailarines)</option>
+                    <option value="hora-loca">Hora Loca y Animación Interactiva</option>
+                    <option value="paquete-completo">Paquete Mixto (Show + Animación de pista)</option>
+                  </select>
+                </div>
+
+                <!-- Detalles adicionales -->
+                <div class="col-12">
+                  <label class="form-label" for="contratar-detalles">Requerimientos o detalles especiales (opcional)</label>
+                  <textarea class="form-control" id="contratar-detalles" name="detalles" rows="3" placeholder="Cuéntanos sobre el lugar, tarima o ritmo de preferencia..."></textarea>
+                </div>
+
+                <!-- Boton Enviar -->
+                <div class="col-12 mt-4">
+                  <button class="btn psr-btn-flame w-100" type="submit">
+                    Solicitar cotización formal <i class="ph-bold ph-paper-plane-tilt ms-1" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <!-- Footer -->
@@ -79,7 +253,7 @@
       </div>
 
       <div class="psr-social">
-        <a class="psr-social-link" href="-" aria-label="Instagram">
+        <a class="psr-social-link" href="https://www.instagram.com/psrpionerosdelasalsayritmos/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
           <img src="../img/icons/instagram.svg" alt="" width="28" height="28">
         </a>
         <a class="psr-social-link" href="-" aria-label="Facebook">
