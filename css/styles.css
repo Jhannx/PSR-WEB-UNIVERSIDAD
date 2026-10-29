@@ -2,9 +2,6 @@
 
 /* 1. Librerias externas */
 @import url("libs/bootstrap.min.css");
-@import url("libs/fonts/fonts.css");
-@import url("libs/phosphor-icons/bold/style.css");
-@import url("libs/phosphor-icons/fill/style.css");
 
 /* 2. Estilos base y variables */
 @import url("base/variables.css");
