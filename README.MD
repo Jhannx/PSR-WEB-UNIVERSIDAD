@@ -11,9 +11,10 @@ Sitio web estatico multi pagina enfocado en dar a conocer los servicios cultural
 
 - **HTML5:** Marcado semántico y accesible.
 - **CSS3:** Arquitectura modular basada en SMACSS (Base, Layout, Componentes).
-- **Librerías externas (libs/):**
-  - **Phosphor Icons:** Paquetes tipográficos e iconografía local (*Bold* y *Fill*).
-  - **Fuentes Tipográficas Locales:** *Inter* (cuerpo) y *Manrope* (títulos) en formato .woff2.
+- **JavaScript (ES6+):** Manipulación del DOM, gestión de eventos, peticiones asíncronas (`fetch` con `async / await`) y persistencia local (`localStorage`).
+- **Recursos externos y librerías:**
+  - **Bootstrap 5:** Sistema de grilla responsive y componentes interactivos.
+  - **Phosphor Icons y Google Fonts:** Iconografía vectorial (*Bold* y *Fill*) y tipografías (*Inter* y *Manrope*).
 
 ## Estructura del Proyecto
 
@@ -55,7 +56,12 @@ img/                        # Fotografías de la academia
 
 
 js/
-    libs/                   # Dependencias y scripts de terceros
+├── libs/               # Dependencias de terceros (Bootstrap bundle)
+├── almacenamiento.js   # Persistencia en localStorage (JSON)
+├── cliente-http.js     # Cliente HTTP global (fetch, async/await, estados 200/404/500)
+├── formularios.js      # Eventos y envío asíncrono de formularios
+├── interactividad.js   # Calculadora de tarifas, filtros y consumo de API
+└── main.js             # Inicializador principal
 
 
 docs/                       # Documentación formal de entrega

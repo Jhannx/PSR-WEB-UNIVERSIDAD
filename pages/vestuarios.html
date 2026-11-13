@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -92,7 +92,7 @@
     <!-- Seccion 2: Catalogo de Vestuarios -->
     <section class="psr-section" aria-labelledby="catalogo-titulo">
       <div class="container">
-        <div class="text-center mb-5">
+        <div class="text-center mb-4">
           <p class="psr-eyebrow">COLECCIÓN ESCÉNICA</p>
           <h2 class="psr-title-xl" id="catalogo-titulo">Líneas de Vestuario Disponibles</h2>
           <p class="psr-lead text-muted mx-auto psr-measure">
@@ -100,9 +100,17 @@
           </p>
         </div>
 
+        <!-- Botones de filtro por genero de baile -->
+        <div class="d-flex flex-wrap justify-content-center gap-2 mb-5" role="group" aria-label="Filtrar vestuarios por género de baile">
+          <button class="btn psr-btn-flame btn-sm" type="button" data-filtro-vestuario="todos" aria-pressed="true">Todos los trajes</button>
+          <button class="btn psr-btn-soft btn-sm" type="button" data-filtro-vestuario="salsa" aria-pressed="false">Salsa</button>
+          <button class="btn psr-btn-soft btn-sm" type="button" data-filtro-vestuario="bachata" aria-pressed="false">Bachata</button>
+          <button class="btn psr-btn-soft btn-sm" type="button" data-filtro-vestuario="fantasia" aria-pressed="false">Fantasía y Solistas</button>
+        </div>
+
         <div class="row g-4">
           <!-- Traje 1: Salsa Pareja -->
-          <div class="col-12 col-md-6 col-lg-3">
+          <div class="col-12 col-md-6 col-lg-3" data-genero-vestuario="salsa">
             <article class="psr-card h-100">
               <img class="psr-card-img" src="../img/pareja-2.jpeg" alt="Trajes de salsa en pareja con detalles brillantes">
               <div class="psr-card-body">
@@ -117,7 +125,7 @@
           </div>
 
           <!-- Traje 2: Ensamble Grupal -->
-          <div class="col-12 col-md-6 col-lg-3">
+          <div class="col-12 col-md-6 col-lg-3" data-genero-vestuario="salsa">
             <article class="psr-card h-100">
               <img class="psr-card-img" src="../img/festival-1.jpeg" alt="Vestuario uniforme para ensamble de bailarines">
               <div class="psr-card-body">
@@ -132,7 +140,7 @@
           </div>
 
           <!-- Traje 3: Bachata y Sensual -->
-          <div class="col-12 col-md-6 col-lg-3">
+          <div class="col-12 col-md-6 col-lg-3" data-genero-vestuario="bachata">
             <article class="psr-card h-100">
               <img class="psr-card-img" src="../img/pareja-3.jpeg" alt="Vestuarios fluidos para bachata y ritmos suaves">
               <div class="psr-card-body">
@@ -147,7 +155,7 @@
           </div>
 
           <!-- Traje 4: Solistas y Festivales -->
-          <div class="col-12 col-md-6 col-lg-3">
+          <div class="col-12 col-md-6 col-lg-3" data-genero-vestuario="fantasia">
             <article class="psr-card h-100">
               <img class="psr-card-img" src="../img/solista-mujer-1.jpeg" alt="Traje individual de alta fantasía para solista">
               <div class="psr-card-body">
@@ -285,5 +293,13 @@
   <a class="psr-fab" href="contacto.html#formulario" aria-label="Déjanos tus datos y te contactamos">
     <i class="ph-fill ph-envelope-simple" aria-hidden="true"></i>
   </a>
+
+  <script src="../js/libs/bootstrap.bundle.min.js"></script>
+  <script src="../js/env.js"></script>
+  <script src="../js/almacenamiento.js"></script>
+  <script src="../js/cliente-http.js"></script>
+  <script src="../js/formularios.js"></script>
+  <script src="../js/interactividad.js"></script>
+  <script src="../js/main.js"></script>
 </body>
 </html>

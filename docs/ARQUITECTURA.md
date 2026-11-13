@@ -37,6 +37,11 @@ PSR-WEB-UNIVERSIDAD/
 
   js/
    libs/
+   almacenamiento.js
+   cliente-http.js
+   formularios.js
+   interactividad.js
+   main.js
 
   docs/
 

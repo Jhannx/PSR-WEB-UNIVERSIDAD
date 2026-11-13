@@ -1,0 +1,20 @@
+/* media.css - estilos para imagenes, figuras y elementos de carga */
+
+figure {
+  margin: 0;
+}
+
+figure img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+figcaption {
+  line-height: 1.4;
+}
+
+.psr-loader {
+  font-family: var(--psr-font-body);
+}
+

@@ -1,5 +1,8 @@
-﻿# Notas internas de desarrollo
+# Notas internas de desarrollo
 docs/dev/
+# Variables de entorno locales
+.env
+js/env.js
 # Archivos del sistema y del editor
 .vscode/
 .idea/

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -99,7 +99,19 @@
         <div class="p-4 p-md-5 rounded-4 bg-light border text-center mb-5 shadow-sm">
           <span class="psr-badge psr-badge-orange">TARIFA CONFIRMADA</span>
           <h2 class="display-5 fw-bold text-dark mt-2 mb-2" id="tarifa-titulo">$4.000 COP</h2>
-          <p class="text-muted mb-0">Por clase asistida · Sin contratos, sin membresías ni mensualidades obligatorias.</p>
+          <p class="text-muted mb-3" id="tarifa-descripcion">Por clase asistida (1 día) · Sin contratos, sin membresías ni mensualidades obligatorias.</p>
+
+          <div class="row justify-content-center mb-3">
+            <div class="col-12 col-sm-8 col-md-5 col-lg-4">
+              <label class="form-label small text-muted mb-1" for="selector-tarifa-rumba">Calcular valor según asistencia:</label>
+              <select class="form-select form-select-sm text-center" id="selector-tarifa-rumba" name="modalidad_tarifa">
+                <option value="diario" selected>Precio diario (1 clase)</option>
+                <option value="semanal">Precio semanal (4 clases)</option>
+                <option value="mensual">Precio mensual (16 clases)</option>
+              </select>
+            </div>
+          </div>
+
           <p class="small text-muted mt-2 mb-0">
             <i class="ph-bold ph-calendar-check text-warning me-1" aria-hidden="true"></i>
             <strong>Horarios:</strong> Lunes a jueves de 7:00 p. m. a 8:00 p. m. en la sede Centro (Calle 20 #25-39).
@@ -293,5 +305,13 @@
   <a class="psr-fab" href="contacto.html#formulario" aria-label="Déjanos tus datos y te contactamos">
     <i class="ph-fill ph-envelope-simple" aria-hidden="true"></i>
   </a>
+
+  <script src="../js/libs/bootstrap.bundle.min.js"></script>
+  <script src="../js/env.js"></script>
+  <script src="../js/almacenamiento.js"></script>
+  <script src="../js/cliente-http.js"></script>
+  <script src="../js/formularios.js"></script>
+  <script src="../js/interactividad.js"></script>
+  <script src="../js/main.js"></script>
 </body>
 </html>
