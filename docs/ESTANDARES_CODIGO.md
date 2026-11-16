@@ -1,4 +1,4 @@
-﻿# Estándares de Código
+# Estándares de Código
 
 ## Reglas de desarrollo
 
@@ -13,7 +13,7 @@ En los archivos .html **nunca** usamos:
 ### 2. Separación de responsabilidades
 * **HTML:** Solo estructura y contenido. No define diseño ni lógica.
 * **CSS:** Solo diseño, colores, tipografía y adaptabilidad para móvil y escritorio.
-* **JavaScript:** Solo interactividad (abrir menús, acordeones y envíos de formularios).
+* **JavaScript:** Interactividad del DOM, gestión de eventos (`submit`, `click`, `input`, `change`), persistencia en `localStorage` (JSON) y peticiones asíncronas (`fetch` con `async / await`).
 
 ### 3. Uso y personalización de Bootstrap
 * Si Bootstrap ya incluye el componente que necesitamos (como el acordeón de preguntas frecuentes o el menú responsive), usamos lo nativo en vez de escribir código repetido.
