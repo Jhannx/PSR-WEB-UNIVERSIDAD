@@ -4,6 +4,7 @@
 function iniciarCalculadoraRumba() {
   const selector = document.getElementById("selector-tarifa-rumba");
   const tituloPrecio = document.getElementById("tarifa-titulo");
+  const descripcionPrecio = document.getElementById("tarifa-descripcion");
 
   if (!selector || !tituloPrecio) {
     return;
@@ -15,10 +16,20 @@ function iniciarCalculadoraRumba() {
     mensual: 16
   };
 
+  const textosPorModalidad = {
+    diario: "Por clase asistida (1 día) · Sin contratos, sin membresías ni mensualidades obligatorias.",
+    semanal: "Por 4 clases asistidas (1 semana) · Sin contratos, sin membresías ni mensualidades obligatorias.",
+    mensual: "Por 16 clases asistidas (1 mes) · Sin contratos, sin membresías ni mensualidades obligatorias."
+  };
+
   selector.addEventListener("change", function () {
     const dias = diasPorModalidad[selector.value] || 1;
     const total = 4000 * dias;
     tituloPrecio.textContent = "$" + total.toLocaleString("es-CO") + " COP";
+
+    if (descripcionPrecio && textosPorModalidad[selector.value]) {
+      descripcionPrecio.textContent = textosPorModalidad[selector.value];
+    }
   });
 }
 
