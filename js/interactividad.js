@@ -65,34 +65,57 @@ function iniciarFiltroVestuarios() {
 
 /* 3. Consumo de API publica de festivos de Colombia usando peticionHttp */
 async function iniciarFestivosColombia() {
-  const contenedor = document.getElementById("contenedor-festivos-colombia");
-  if (!contenedor) {
+  const contenedores = document.querySelectorAll("[data-festivos-colombia]");
+  if (!contenedores.length) {
     return;
   }
 
   try {
+    const anio = new Date().getFullYear();
     const festivos = await peticionHttp(
-      "https://date.nager.at/api/v3/PublicHolidays/2026/CO",
-      { method: "GET" },
-      contenedor
+      "https://date.nager.at/api/v3/PublicHolidays/" + anio + "/CO",
+      { method: "GET" }
     );
 
-    const hoy = new Date().toISOString().slice(0, 10);
-    const proximos = festivos.filter(function (f) {
-      return f.date >= hoy;
+    const partesHoy = new Intl.DateTimeFormat("en-CA", {
+      timeZone: "America/Bogota",
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit"
+    }).formatToParts(new Date());
+    const hoy = partesHoy.find(parte => parte.type === "year").value + "-" +
+      partesHoy.find(parte => parte.type === "month").value + "-" +
+      partesHoy.find(parte => parte.type === "day").value;
+    const proximos = festivos.filter(function (festivo) {
+      return festivo.date >= hoy;
     }).slice(0, 3);
 
-    const lista = document.createElement("ul");
-    lista.className = "list-unstyled mb-0 small";
+    contenedores.forEach(function (contenedor) {
+      contenedor.replaceChildren();
+      if (!proximos.length) {
+        contenedor.textContent = "No hay más festivos este año.";
+        return;
+      }
 
-    proximos.forEach(function (festivo) {
-      const item = document.createElement("li");
-      item.textContent = "• " + festivo.date + ": " + festivo.localName + " (Sin clase)";
-      lista.appendChild(item);
+      const lista = document.createElement("ul");
+      lista.className = "list-unstyled mb-0 small";
+      proximos.forEach(function (festivo) {
+        const fecha = new Date(festivo.date + "T12:00:00");
+        const fechaLegible = new Intl.DateTimeFormat("es-CO", {
+          day: "numeric",
+          month: "long"
+        }).format(fecha);
+        const item = document.createElement("li");
+        item.className = "mb-1";
+        item.textContent = fechaLegible + " · " + festivo.localName + " — Día sin clase";
+        lista.appendChild(item);
+      });
+      contenedor.appendChild(lista);
     });
-
-    contenedor.appendChild(lista);
   } catch (error) {
     console.warn("No se pudieron cargar los festivos:", error);
+    contenedores.forEach(function (contenedor) {
+      contenedor.textContent = "No se pudo consultar el calendario de festivos.";
+    });
   }
 }
