@@ -18,3 +18,100 @@ figcaption {
   font-family: var(--psr-font-body);
 }
 
+.psr-media-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-color: #17132d;
+}
+
+.psr-video-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #100d20;
+}
+
+.psr-video-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  min-height: 5.5rem;
+  padding: 0.55rem 1.1rem 0.55rem 0.6rem;
+  border: 2px solid #fff;
+  border-radius: 999px;
+  color: #fff;
+  background: rgb(31 20 80 / 94%);
+  box-shadow: 0 0.5rem 1.5rem rgb(0 0 0 / 45%);
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  transition: opacity 180ms ease, visibility 180ms ease, background-color 180ms ease;
+}
+
+.psr-video-play-icon {
+  position: relative;
+  display: grid;
+  width: 4.25rem;
+  height: 4.25rem;
+  place-items: center;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  background: #e91e63;
+  box-shadow: 0 0.4rem 1.4rem rgb(0 0 0 / 40%);
+  transition: transform 180ms ease, background-color 180ms ease;
+}
+
+.psr-video-play-icon::before {
+  width: 0;
+  height: 0;
+  margin-left: 0.3rem;
+  border-top: 0.72rem solid transparent;
+  border-bottom: 0.72rem solid transparent;
+  border-left: 1.05rem solid #fff;
+  content: "";
+}
+
+.psr-video-play-label {
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  color: #fff;
+  background: rgb(16 13 32 / 76%);
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.psr-video-play:hover .psr-video-play-icon,
+.psr-video-play:focus-visible .psr-video-play-icon {
+  transform: scale(1.08);
+  background: #c81751;
+}
+
+.psr-video-play:hover,
+.psr-video-play:focus-visible {
+  background: #3b2596;
+}
+
+.psr-video-play:focus-visible {
+  outline: 3px solid #00a6da;
+  outline-offset: 4px;
+}
+
+.psr-video-frame.is-playing .psr-video-play {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .psr-video-play,
+  .psr-video-play-icon {
+    transition: none;
+  }
+}
+

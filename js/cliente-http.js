@@ -66,41 +66,14 @@ async function peticionHttp(url, opciones, contenedor) {
   }
 }
 
-/* Envia los datos del formulario al servidor de correo configurado */
+/* Envía el formulario al endpoint seguro; la clave de Brevo vive en el servidor. */
 async function enviarCorreoFormulario(idFormulario, datos, contenedor) {
-  const env = window.PSR_ENV || {};
-
-  if (env.BREVO_API_KEY) {
-    const correoAcademia = env.EMAIL_FROM_ADDRESS || "escuelapsr@gmail.com";
-    const cuerpoBrevo = {
-      sender: { name: "Web PSR", email: correoAcademia },
-      to: [{ email: correoAcademia, name: "Escuela PSR" }],
-      subject: "Nueva solicitud web: " + idFormulario,
-      htmlContent: "<p>Datos enviados desde <strong>" + idFormulario + "</strong>:</p><pre>" + JSON.stringify(datos, null, 2) + "</pre>"
-    };
-
-    return await peticionHttp(
-      "https://api.brevo.com/v3/smtp/email",
-      {
-        method: "POST",
-        headers: {
-          "accept": "application/json",
-          "api-key": env.BREVO_API_KEY,
-          "content-type": "application/json"
-        },
-        body: JSON.stringify(cuerpoBrevo)
-      },
-      contenedor
-    );
-  }
-
-  /* Solo si no existe env.js (ej. en otro computador), usa JSONPlaceholder */
   return await peticionHttp(
-    "https://jsonplaceholder.typicode.com/posts",
+    "/api/send-email",
     {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(datos)
+      body: JSON.stringify({ formId: idFormulario, data: datos })
     },
     contenedor
   );

@@ -46,6 +46,24 @@ function iniciarFormularios() {
   const formularios = document.querySelectorAll("form");
 
   formularios.forEach(function (formulario) {
+    if (!formulario.querySelector('[name="website"]')) {
+      const trampa = document.createElement("div");
+      trampa.className = "visually-hidden";
+      trampa.setAttribute("aria-hidden", "true");
+
+      const etiqueta = document.createElement("label");
+      etiqueta.textContent = "Deja este campo vacío";
+
+      const campoTrampa = document.createElement("input");
+      campoTrampa.type = "text";
+      campoTrampa.name = "website";
+      campoTrampa.tabIndex = -1;
+      campoTrampa.autocomplete = "off";
+      etiqueta.appendChild(campoTrampa);
+      trampa.appendChild(etiqueta);
+      formulario.appendChild(trampa);
+    }
+
     const id = formulario.id;
 
     /* 1. Si hay datos guardados en localStorage, los rellenamos al cargar la pagina */
