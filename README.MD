@@ -1,77 +1,99 @@
-# PSR (Pioneros de la Salsa y Ritmos) - Pagina Web
+# PSR (Pioneros de la Salsa y Ritmos) - Aplicación Web SPA
 
-Proyecto web desarrollado para la academia y academia de baile **PSR (Pioneros de la Salsa y Ritmos)**.
+Aplicación web de página única (SPA) desarrollada con **Vue 3**, **Vue Router** y **Vite** para la escuela de baile **PSR (Pioneros de la Salsa y Ritmos)** en Sincelejo.
 
 ## Descripción del Proyecto
 
-Sitio web estatico multi pagina enfocado en dar a conocer los servicios culturales, clases de baile, eventos, talleres y comercialización de vestuarios artísticos.
-
+Portal web enfocado en presentar los programas de formación en danza, clases de rumba aeróbica, clases personalizadas, cotización de shows, talleres para instituciones, catálogo interactivo de vestuarios, blog comunitario y gestión reactiva de solicitudes.
 
 ## Tecnologías y Recursos
 
-- **HTML5:** Marcado semántico y accesible.
-- **CSS3:** Arquitectura modular basada en SMACSS (Base, Layout, Componentes).
-- **JavaScript (ES6+):** Manipulación del DOM, gestión de eventos, peticiones asíncronas (`fetch` con `async / await`) y persistencia local (`localStorage`).
-- **Recursos externos y librerías:**
-  - **Bootstrap 5:** Sistema de grilla responsive y componentes interactivos.
-  - **Phosphor Icons y Google Fonts:** Iconografía vectorial (*Bold* y *Fill*) y tipografías (*Inter* y *Manrope*).
+- **Vue 3 (Single File Components - `.vue`):** Arquitectura basada en componentes reutilizables (`props` y eventos personalizados `$emit`), directivas reactivas (`v-model`, `v-for`, `v-if / v-else`, `v-bind`, `v-on`) y estado global compartido (`reactive`).
+- **Vue Router 4:** Navegación SPA sin recarga de página con 11 rutas (incluyendo ruta dinámica `/blog/:slug` para el detalle de publicaciones).
+- **Vite:** Empaquetador y servidor de desarrollo rápido.
+- **HTML5 y CSS3:** Marcado semántico accesible, arquitectura CSS modular (CSS Grid en layout principal, Flexbox en componentes y 3 breakpoints responsive).
+- **Fetch API y `localStorage`:** Consumo asíncrono (`async / await`) de la API pública de días festivos de Colombia (`date.nager.at`), envío HTTP `POST` con manejo de estados (`200/201`, `404`, `500`) y persistencia de borradores e historial de solicitudes en `localStorage`.
+- **Bootstrap 5, Phosphor Icons y Google Fonts:** Grilla responsive, acordeones, menú móvil e iconografía.
 
-## Estructura del Proyecto
+## Arquitectura de Carpetas
 
+```text
 PSR-WEB-UNIVERSIDAD/
-index.html                  # Página principal (Inicio)
+├── index.html                  # Punto de entrada HTML de la SPA
+├── package.json                # Dependencias y scripts (dev, build, preview)
+├── vite.config.js              # Configuración de Vite y plugin de Vue
+├── public/
+│   ├── img/                    # Fotografías de la academia e íconos SVG
+│   ├── js/                     # Bootstrap bundle local
+│   └── _redirects              # Regla de redirección SPA para despliegue
+├── css/
+│   ├── base/                   # Variables CSS y estilos globales (CSS Grid)
+│   ├── layout/                 # Estilos de cabecera, navegación y pie de página
+│   ├── components/             # Botones, tarjetas, formularios, acordeones
+│   ├── libs/                   # Bootstrap CSS y recursos de respaldo
+│   └── styles.css              # Archivo principal de estilos
+├── src/
+│   ├── main.js                 # Inicialización de Vue y Vue Router
+│   ├── App.vue                 # Componente raíz (Header + RouterView + Footer)
+│   ├── components/             # Componentes reutilizables (.vue)
+│   │   ├── PsrHeader.vue       # Barra de navegación SPA
+│   │   ├── PsrFooter.vue       # Pie de página y botón flotante
+│   │   ├── PsrPageHero.vue     # Portada reutilizable para vistas internas
+│   │   ├── PsrCard.vue         # Tarjeta reutilizable con props y $emit('seleccionar')
+│   │   ├── PsrMediaCard.vue    # Tarjeta multimedia para videos e imágenes (Cloudflare R2)
+│   │   ├── PsrFestivosBox.vue  # Widget de festivos de Colombia consumidos por API
+│   │   └── PsrConfirmBox.vue   # Confirmación HTTP 200/201 con $emit('reiniciar')
+│   ├── views/                  # Vistas principales conectadas a Vue Router (.vue)
+│   │   ├── InicioView.vue      # Ruta: /
+│   │   ├── AcademiaView.vue    # Ruta: /academia
+│   │   ├── RumbaView.vue       # Ruta: /rumba-aerobica
+│   │   ├── PersonalizadasView.vue # Ruta: /personalizadas
+│   │   ├── VestuariosView.vue  # Ruta: /vestuarios (Catálogo con filtro reactivo)
+│   │   ├── ContratarView.vue   # Ruta: /contratar
+│   │   ├── TalleresView.vue    # Ruta: /talleres
+│   │   ├── NosotrosView.vue    # Ruta: /nosotros
+│   │   ├── BlogView.vue        # Ruta: /blog
+│   │   ├── BlogDetalleView.vue # Ruta dinámica: /blog/:slug (Detalle de ítem)
+│   │   ├── ContactoView.vue    # Ruta: /contacto
+│   │   └── RedNoDisponibleView.vue # Ruta: /red-no-disponible
+│   ├── router/
+│   │   └── index.js            # Definición de rutas SPA y scrollBehavior
+│   ├── store/
+│   │   └── estadoGlobal.js     # Estado reactivo centralizado compartido entre vistas
+│   ├── services/
+│   │   ├── almacenamiento.js   # Persistencia en localStorage (JSON)
+│   │   └── clienteHttp.js      # Cliente HTTP fetch con async/await y estados HTTP
+│   └── data/
+│       └── contenidosPsr.js    # Colecciones de datos de programas, trajes y artículos
+└── docs/                       # Documentación complementaria del proyecto
+```
 
-pages/                          # Secciones y subpáginas del portal
-│   ├── academia.html           # Formación y niveles de baile
-│   ├── rumba-aerobica.html     # Clases fitness y bienestar
-│   ├── personalizadas.html     # Clases y preparación individualizada
-│   ├── contratar.html          # Cotización de shows y espectáculos
-│   ├── talleres.html           # Cursos intensivos y workshops
-│   ├── vestuarios.html         # Catálogo y alquiler de vestuario
-│   ├── nosotros.html           # Trayectoria, equipo y filosofía
-│   ├── contacto.html           # Información y formulario de contacto
-│   ├── blog.html               # Centro de noticias y artículos│
-│   ├── blog-anuncios.html      # Publicación: Anuncios
-│   ├── blog-clases.html        # Publicación: Clases
-│   ├── blog-comunidad.html     # Publicación: Comunidad
-│   └── blog-presentaciones.html# Publicación: Presentaciones
+## Instrucciones de Instalación y Ejecución Local
 
+1. **Clonar el repositorio e ingresar a la carpeta del proyecto:**
+   ```bash
+   git clone https://github.com/Jhannx/PSR-WEB-UNIVERSIDAD.git
+   cd PSR-WEB-UNIVERSIDAD
+   ```
 
+2. **Instalar las dependencias:**
+   ```bash
+   npm install
+   ```
 
-css/
-│   base/                   # Variables CSS, reset y estilos globales
-│   layout/                 # Cabecera, navegación y pie de página compartidos
-│   components/             # Botones, tarjetas, formularios, acordeones
-│   libs/                   # Dependencias de terceros (iconos, fuentes)
-│   │   fonts/              # Inter y Manrope locales (.woff2)
-│   │   phosphor-icons/     # Iconografía vectorial local
-│   styles.css              # Manifiesto principal de estilos
+3. **Iniciar el servidor de desarrollo local:**
+   ```bash
+   npm run dev
+   ```
 
+4. **Generar el paquete optimizado para producción (build):**
+   ```bash
+   npm run build
+   ```
 
+## Enlace de Producción
 
-img/                        # Fotografías de la academia
-│   icons/                  # Iconos de redes sociales (.svg)
-│   logo-psr-pestaña.png    # Logo que se muestra en la pestaña del navegador
-
-
-
-js/
-├── libs/               # Dependencias de terceros (Bootstrap bundle)
-├── almacenamiento.js   # Persistencia en localStorage (JSON)
-├── cliente-http.js     # Cliente HTTP global (fetch, async/await, estados 200/404/500)
-├── formularios.js      # Eventos y envío asíncrono de formularios
-├── interactividad.js   # Calculadora de tarifas, filtros y consumo de API
-└── main.js             # Inicializador principal
-
-
-docs/                       # Documentación formal de entrega
-README.md                   # Ficha técnica y guía de inicio rápido
-
-
-## Documentación
-
-La documentación complementaria (estándares de codificación, arquitectura y requerimientos) se encuentra disponible en la carpeta:
-/docs
+- **URL de Producción:** *(Pendiente de publicar tras revisión final del build)*
 
 ## Autor
 

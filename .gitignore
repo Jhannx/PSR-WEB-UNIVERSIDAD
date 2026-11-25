@@ -1,9 +1,10 @@
+# Dependencias y compilacion de Vite
+node_modules/
+dist/
 # Notas internas de desarrollo
 docs/dev/
 # Variables de entorno locales
 .env
-.env.*
-.dev.vars*
 js/env.js
 # Archivos del sistema y del editor
 .vscode/
