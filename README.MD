@@ -65,8 +65,23 @@ PSR-WEB-UNIVERSIDAD/
 │   │   └── clienteHttp.js      # Cliente HTTP fetch con async/await y estados HTTP
 │   └── data/
 │       └── contenidosPsr.js    # Colecciones de datos de programas, trajes y artículos
-└── docs/                       # Documentación complementaria del proyecto
+└── docs/                       # Documentación técnica y funcional del proyecto
+    ├── ARQUITECTURA.md                 # Arquitectura por capas, flujo de datos y estructura
+    ├── ESTANDARES_CODIGO.md            # Convenciones Vue 3, CSS modular y accesibilidad
+    ├── REQUERIMIENTOS.md               # Reglas de negocio, RF por vista y matriz académica
+    ├── INFORMACION_PSR.md              # Datos oficiales confirmados de la academia PSR
+    └── GUIA_CODIGO_Y_COMPONENTES.md    # Catálogo detallado de componentes, vistas, props y emits
 ```
+
+## Documentación Detallada (`docs/`)
+
+Para facilitar la revisión y entrega del proyecto, la carpeta [`docs/`](docs/) incluye:
+
+1. [**Arquitectura del Sistema (`docs/ARQUITECTURA.md`)**](docs/ARQUITECTURA.md): Diagrama general, árbol completo del proyecto y explicación técnica de cada capa (Vue 3, Vue Router, Store reactivo, Servicios HTTP/LocalStorage, Serverless Function con Brevo, Cloudflare R2 y CSS Grid/Flexbox).
+2. [**Guía de Código y Componentes (`docs/GUIA_CODIGO_Y_COMPONENTES.md`)**](docs/GUIA_CODIGO_Y_COMPONENTES.md): Catálogo técnico de los 7 componentes reutilizables (`props` y `$emit`), funcionalidades reactivas de las 12 vistas, estructura JSON en `localStorage` y modelo de datos.
+3. [**Requerimientos y Matriz Técnica (`docs/REQUERIMIENTOS.md`)**](docs/REQUERIMIENTOS.md): Reglas de negocio, requerimientos funcionales (RF-01 a RF-12), especificación de los 7 formularios y matriz de cumplimiento de requisitos académicos.
+4. [**Estándares de Código (`docs/ESTANDARES_CODIGO.md`)**](docs/ESTANDARES_CODIGO.md): Convenciones de nombres, estructura de Single File Components (`.vue`), patrones de comunicación Padre-Hijo y criterios de accesibilidad (ARIA / HTML5 semántico).
+5. [**Información Confirmada de PSR (`docs/INFORMACION_PSR.md`)**](docs/INFORMACION_PSR.md): Paleta de colores oficial, ubicación, horarios, tarifas y datos reales de la academia.
 
 ## Instrucciones de Instalación y Ejecución Local
 
@@ -93,7 +108,7 @@ PSR-WEB-UNIVERSIDAD/
 
 ## Enlace de Producción
 
-- **URL de Producción:** *(Pendiente de publicar tras revisión final del build)*
+- **URL de Producción:** [https://psr-web-universidad.jhanpaulcorena285.workers.dev](https://psr-web-universidad.jhanpaulcorena285.workers.dev)
 
 ## Autor
 
